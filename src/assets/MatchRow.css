@@ -1,0 +1,13 @@
+.MatchRow {
+  text-align: center;
+  display: block;
+  background-color: #F7F7F9;
+}
+
+.MatchRow-match-contents {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
