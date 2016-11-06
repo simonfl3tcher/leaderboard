@@ -10,6 +10,7 @@ let matches = [
 ];
 
 describe("<MatchRow />", function() {
+
   describe("when a match is set", function() {
     it("should render a MatchRow", function() {
       const wrapper = shallow(<CurrentMatches matches={matches}/>);
@@ -25,4 +26,5 @@ describe("<MatchRow />", function() {
       ).to.equal(true);
     });
   });
+
 });

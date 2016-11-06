@@ -4,7 +4,7 @@ import { expect }         from 'chai';
 
 import MatchRow           from './MatchRow';
 
-var match = {
+let match = {
   title: "BSE vs Stowmarket",
   date: "12-12-2015",
   time: "11:00"
