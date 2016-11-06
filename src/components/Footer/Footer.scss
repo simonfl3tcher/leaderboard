@@ -1,0 +1,19 @@
+@import '../../_setup';
+
+.Footer {
+  padding: 5em 0;
+  background-color: $brand-light-grey;
+  color: $brand-dark-grey;
+  font-size: 1em;
+
+  .Footer-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+    fill: $white;
+  }
+
+  a {
+    margin-top: 20px;
+    color: $brand-dark-grey;
+  }
+}

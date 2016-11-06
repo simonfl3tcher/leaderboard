@@ -3,6 +3,7 @@
 const webpack = require("webpack");
 
 module.exports = {
+  devtool: "source-map",
   entry: './src/app.js',
   output: {
     path: __dirname + '/public/assets',
@@ -26,6 +27,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

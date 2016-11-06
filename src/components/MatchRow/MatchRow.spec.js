@@ -1,8 +1,8 @@
-import React from 'react';
+import React              from 'react';
 import { mount, shallow } from 'enzyme';
-import {expect} from 'chai';
+import { expect }         from 'chai';
 
-import MatchRow from '../src/components/MatchRow';
+import MatchRow           from './MatchRow';
 
 var match = {
   title: "BSE vs Stowmarket",

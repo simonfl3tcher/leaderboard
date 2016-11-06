@@ -1,6 +1,13 @@
-import React from 'react';
+// CSS
+import 'milligram'
+import './default.scss'
+
+// JS
+import React    from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+
+// Components
+import App      from './components/App/App';
 
 const matches = [
   { title: "BSE vs Stowmarket", date: "12-12-2015", time: "11:00" },
