@@ -10,15 +10,19 @@ let matches = [
 ];
 
 describe("<MatchRow />", function() {
-  it("should render a MatchRow when at least one match is defined", function() {
-    const wrapper = shallow(<CurrentMatches matches={matches}/>);
-    expect(wrapper.find(MatchRow)).to.have.length(1);
+  describe("when a match is set", function() {
+    it("should render a MatchRow", function() {
+      const wrapper = shallow(<CurrentMatches matches={matches}/>);
+      expect(wrapper.find(MatchRow)).to.have.length(1);
+    });
   });
 
-  it("should display the string 'There are no matches happening right now :(' when no matches are defined", function(){
-    const wrapper = shallow(<CurrentMatches matches={[]} />);
-    expect(
-      wrapper.contains("There are no matches happening right now :(")
-    ).to.equal(true);
+  describe("when a match is not set", function() {
+    it("should display the string 'There are no matches happening right now :('", function(){
+      const wrapper = shallow(<CurrentMatches matches={[]} />);
+      expect(
+        wrapper.contains("There are no matches happening right now :(")
+      ).to.equal(true);
+    });
   });
 });
