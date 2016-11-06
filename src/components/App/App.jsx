@@ -9,10 +9,15 @@ import HomepageHeader       from '../HomepageHeader/HomepageHeader';
 import CurrentMatches       from '../CurrentMatches/CurrentMatches';
 import Footer               from '../Footer/Footer';
 
+
 const App = (props) =>
   <div className="App">
     <HomepageHeader />
-    <CurrentMatches {...props} />
+    <div className="container">
+      <div className="row">
+        { props.children }
+      </div>
+    </div>
     <Footer />
   </div>
 

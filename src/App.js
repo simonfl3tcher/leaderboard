@@ -3,19 +3,14 @@ import 'milligram'
 import './default.scss'
 
 // JS
-import React    from 'react';
-import ReactDOM from 'react-dom';
+import React               from 'react';
+import ReactDOM            from 'react-dom';
+import { browserHistory }  from 'react-router';
 
 // Components
-import App      from './components/App/App';
-
-const matches = [
-  { title: "BSE vs Stowmarket", date: "12-12-2015", time: "11:00" },
-  { title: "Newmarket vs Purdis Heath", date: "12-12-2015", time: "11:00" },
-  { title: "Fynn Valley vs Diss", date: "12-12-2015", time: "11:00" },
-];
+import Routes from './routes';
 
 ReactDOM.render(
-  <App matches={matches} />,
+  <Routes history={browserHistory} />,
   document.getElementById('root')
 );

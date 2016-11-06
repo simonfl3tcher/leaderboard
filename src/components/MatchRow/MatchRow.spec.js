@@ -1,7 +1,9 @@
+// JS
 import React              from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect }         from 'chai';
 
+// Components
 import MatchRow           from './MatchRow';
 
 let match = {
