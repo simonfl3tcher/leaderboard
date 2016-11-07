@@ -12,12 +12,7 @@ import Footer               from '../Footer/Footer';
 
 const App = (props) =>
   <div className="App">
-    <HomepageHeader />
-    <div className="container">
-      <div className="row">
-        { props.children }
-      </div>
-    </div>
+    { props.children }
     <Footer />
   </div>
 
