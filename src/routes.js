@@ -7,6 +7,7 @@ import { Router, Route, IndexRoute }  from 'react-router';
 import App            from './components/App/App';
 import Home           from './components/Home/Home';
 import NewMatch       from './components/NewMatch/NewMatch';
+import ViewMatch      from './components/ViewMatch/ViewMatch';
 import NotFound       from './components/NotFound/NotFound';
 
 const Routes = (props) => (
@@ -14,8 +15,9 @@ const Routes = (props) => (
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
 
-      <Route path="/new"  component={NewMatch} />
-      <Route path="*"     component={NotFound} />
+      <Route path="/match/new"      component={NewMatch} />
+      <Route path="/match/:matchId" component={ViewMatch} />
+      <Route path="*"               component={NotFound} />
     </Route>
   </Router>
 );

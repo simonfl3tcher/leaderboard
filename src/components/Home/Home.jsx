@@ -1,19 +1,28 @@
+// CSS/Assets
+import './Home.scss';
+
 // JS
-import React from 'react';
+import React        from 'react';
+import { connect }  from 'react-redux';
 
 // Components
 import CurrentMatches from '../CurrentMatches/CurrentMatches';
-import HomepageHeader from '../HomepageHeader/HomepageHeader';
+import Header         from '../Header/Header';
+import PageTitle      from '../PageTitle/PageTitle';
 
-const matches = [
-  { title: "BSE vs Stowmarket", date: "12-12-2015", time: "11:00" },
-  { title: "Newmarket vs Purdis Heath", date: "12-12-2015", time: "11:00" },
-  { title: "Fynn Valley vs Diss", date: "12-12-2015", time: "11:00" },
-];
+const mapStateToProps = ({ matches }) => ({
+  matches
+});
 
-const Home = () =>
+export const Home = ({ matches }) =>
   <div>
-    <HomepageHeader />
+    <Header />
+    <PageTitle>
+      <h1 className="Home-header">
+        <span>Leaderboard.</span>
+        The one place to follow the latest golf scores.
+      </h1>
+    </PageTitle>
     <div className="container">
       <div className="row">
         <CurrentMatches matches={matches} />
@@ -21,4 +30,4 @@ const Home = () =>
     </div>
   </div>
 
-export default Home;
+export default connect(mapStateToProps)(Home);

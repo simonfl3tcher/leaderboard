@@ -4,7 +4,7 @@ import { mount, shallow } from 'enzyme';
 import { expect }         from 'chai';
 
 // Components
-import { NewMatch }       from './NewMatch';
+import ConnectedApp, { ViewMatch } from './ViewMatch';
 
 const match = {
   title: "BSE vs Stowmarket",
@@ -12,11 +12,11 @@ const match = {
   time: "11:00"
 }
 
-describe("<NewMatch />", () => {
-  it("should have the string 'Create Match here!' ", () => {
-    const wrapper = shallow(<NewMatch match={match}/>);
+describe("<ViewMatch />", () => {
+  it("should have the string 'BSE vs Stowmarket' ", () => {
+    const wrapper = shallow(<ViewMatch match={match}/>);
     expect(
-      wrapper.contains("Create Match!")
+      wrapper.contains(match.title)
     ).to.equal(true);
   });
 });

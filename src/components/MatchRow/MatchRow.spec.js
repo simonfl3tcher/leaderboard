@@ -12,8 +12,8 @@ let match = {
   time: "11:00"
 }
 
-describe("<MatchRow />", function() {
-  it("should have string of text describing the match title", function() {
+describe("<MatchRow />", () => {
+  it("should have string of text describing the match title", () => {
     const wrapper = shallow(<MatchRow data={match}/>);
     expect(
       wrapper.contains("BSE vs Stowmarket")

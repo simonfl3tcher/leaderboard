@@ -1,0 +1,16 @@
+@import '../../_setup';
+
+.Home-header {
+  font-size: 48px;
+  line-height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: $brand-darker-grey;
+  margin: 0px;
+  font-weight: 200;
+  width: 75%;
+
+  span {
+    color: $brand;
+  }
+}

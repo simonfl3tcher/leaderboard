@@ -1,0 +1,43 @@
+@import '../../_setup';
+
+.Header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  animation: fadeInDown 0.5s;
+  padding: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #dce0e0;
+  width: 100%;
+  margin-top: 0;
+
+  header {
+    display: block;
+    height: 61px;
+
+    .comp {
+      border-left: 0;
+      border-right: 0;
+      height: 61px;
+      line-height: 61px;
+      position: relative;
+    }
+
+    .logo {
+      animation: Header-logo-spin infinite 20s linear;
+      height: 61px;
+      fill: $white;
+    }
+
+    .header-link {
+      display:block;
+      padding: 0 19px;
+      color: $black;
+    }
+  }
+}
+
+@keyframes Header-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

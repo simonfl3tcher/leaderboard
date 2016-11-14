@@ -5,14 +5,14 @@ import './App.scss';
 import React, { Component } from 'react';
 
 // Components
-import HomepageHeader       from '../HomepageHeader/HomepageHeader';
 import CurrentMatches       from '../CurrentMatches/CurrentMatches';
 import Footer               from '../Footer/Footer';
 
-
 const App = (props) =>
   <div className="App">
-    { props.children }
+    <div id="site-contents">
+      { props.children }
+    </div>
     <Footer />
   </div>
 

@@ -115,6 +115,11 @@ form.text.warn div.submit button:focus span {
   }
 }
 
+#site-contents {
+  display: block;
+  margin-top: 61px;
+}
+
 // Push
 .pull-right {
   float: right;
@@ -132,4 +137,17 @@ form.text.warn div.submit button:focus span {
 }
 .push-top-double {
   margin-top: $v-gutter*2;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dce0e0;
+}
+
+.button.button-outline,
+button.button-outline,
+input[type='button'].button-outline,
+input[type='reset'].button-outline,
+input[type='submit'].button-outline {
+  border-color: $brand;
+  color: $brand;
 }
