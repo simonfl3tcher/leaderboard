@@ -1,17 +1,14 @@
 // JS
 import 'jsdom-global/register'
-import React              from 'react';
 import { Provider }       from 'react-redux';
 import * as router        from 'react-router';
-import { mount, shallow } from 'enzyme';
-import { expect }         from 'chai';
+import { mount }          from 'enzyme';
 import configureStore     from 'redux-mock-store'
-import sinon              from 'sinon';
 
 const mockStore = configureStore([])
 
 // Components
-import ConnectedApp, { NewMatch }       from './NewMatch';
+import ConnectedApp, { NewMatch } from './NewMatch';
 
 const match = {
   title: "BSE vs Stowmarket",

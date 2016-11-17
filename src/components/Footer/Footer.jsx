@@ -2,9 +2,6 @@
 import './Footer.scss';
 import logo from '../../assets/logo.svg';
 
-// JS
-import React, { Component } from 'react';
-
 const Footer = () =>
   <footer className="Footer push-top">
     <div className="container">

@@ -1,10 +1,5 @@
-// JS
-import React              from 'react';
-import { mount, shallow } from 'enzyme';
-import { expect }         from 'chai';
-
 // Components
-import ConnectedApp, { ViewMatch } from './ViewMatch';
+import { ViewMatch } from './ViewMatch';
 
 const match = {
   title: "BSE vs Stowmarket",

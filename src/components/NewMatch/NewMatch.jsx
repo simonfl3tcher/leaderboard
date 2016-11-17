@@ -2,8 +2,7 @@
 import './NewMatch.scss';
 
 // JS
-import React, { Component }     from 'react';
-import ReactDOM                 from 'react-dom';
+import { Component }            from 'react';
 import { Link, browserHistory } from 'react-router';
 import { connect }              from 'react-redux';
 import { addMatch }             from '../../actions/MatchActions/MatchActions';

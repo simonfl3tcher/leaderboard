@@ -2,10 +2,10 @@
 import './CurrentMatches.scss';
 
 // JS
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 // Components
-import MatchRow             from '../MatchRow/MatchRow';
+import MatchRow      from '../MatchRow/MatchRow';
 
 class CurrentMatches extends Component {
   renderListOrNoListMessage() {

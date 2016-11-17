@@ -1,8 +1,3 @@
-// JS
-import React              from 'react';
-import { mount, shallow } from 'enzyme';
-import { expect }         from 'chai';
-
 // Components
 import CurrentMatches     from './CurrentMatches';
 import MatchRow           from '../MatchRow/MatchRow';

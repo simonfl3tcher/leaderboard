@@ -1,9 +1,6 @@
 // CSS/Assets
 import './App.scss';
 
-// JS
-import React, { Component } from 'react';
-
 // Components
 import CurrentMatches       from '../CurrentMatches/CurrentMatches';
 import Footer               from '../Footer/Footer';

@@ -7,7 +7,7 @@
   "scripts": {
     "server": "cross-env NODE_ENV=development webpack-dev-server --port 2000 --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "mocha \"src/**/*.spec.js\" --recursive --compilers js:babel-core/register --require ignore-styles",
+    "test": "mocha \"src/**/*.spec.js\"",
     "test:watch": "npm test -- --watch"
   },
   "devDependencies": {

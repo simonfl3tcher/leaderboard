@@ -2,7 +2,6 @@
 import './Home.scss';
 
 // JS
-import React        from 'react';
 import { connect }  from 'react-redux';
 
 // Components

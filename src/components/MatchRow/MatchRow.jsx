@@ -2,8 +2,7 @@
 import './MatchRow.scss';
 
 // JS
-import React, { Component } from 'react';
-import { Link }             from 'react-router';
+import { Link } from 'react-router';
 
 const MatchRow = (props) =>
   <div className="section align-center section-grey push-top">
