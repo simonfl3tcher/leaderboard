@@ -1,3 +1,6 @@
+/*eslint-env mocha */
+/*global React shallow expect sinon */
+
 // JS
 import 'jsdom-global/register'
 import { Provider }       from 'react-redux';
@@ -11,12 +14,12 @@ const mockStore = configureStore([])
 import ConnectedApp, { NewMatch } from './NewMatch';
 
 const match = {
-  title: "BSE vs Stowmarket",
-  date: "12-12-2015",
-  time: "11:00"
+  title: 'BSE vs Stowmarket',
+  date: '12-12-2015',
+  time: '11:00'
 }
 
-describe("<NewMatch />", () => {
+describe('<NewMatch />', () => {
   let Component;
 
   beforeEach(() => {
@@ -32,22 +35,24 @@ describe("<NewMatch />", () => {
     Component = wrapper.find(NewMatch);
   });
 
-  it("should render", () => {
+  it('should render', () => {
     expect(
       Component.length
     ).to.be.truthy;
   });
 
-  it("should have the string 'Create Match here!' ", () => {
+  it('should have the string \'Create Match here!\' ', () => {
     const wrapper = shallow(<NewMatch match={match}/>);
     expect(
-      wrapper.contains("Create Match!")
+      wrapper.contains('Create Match!')
     ).to.equal(true);
   });
 
-  it("should change the route on onSave", () => {
+  it('should change the route on onSave', () => {
     router.browserHistory = { push: ()=>{} };
-    let browserHistoryPushStub = sinon.stub(router.browserHistory, 'push', () => { });
+    let browserHistoryPushStub = sinon.stub(
+      router.browserHistory, 'push', () => { }
+    );
 
     Component.find('button').simulate('click');
 

@@ -2,7 +2,7 @@ import { ADD_MATCH } from '../constants/actionTypes';
 
 export const matches = (state = [], action) => {
   switch(action.type) {
-    case ADD_MATCH:
+    case ADD_MATCH: {
       let newMatch = {
         id:     +new Date,
         title:  action.data.title,
@@ -10,7 +10,9 @@ export const matches = (state = [], action) => {
         time:   action.data.time
       }
       return state.concat([newMatch]);
-    default:
+    }
+    default: {
       return state;
+    }
   }
 };

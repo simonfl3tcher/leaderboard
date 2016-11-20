@@ -1,9 +1,9 @@
 'use strict';
 
-const webpack = require("webpack");
+require('webpack');
 
 module.exports = {
-  devtool: "source-map",
+  devtool: 'source-map',
   entry: './src/app.js',
   output: {
     path: __dirname + '/public/assets',
@@ -16,8 +16,14 @@ module.exports = {
   module: {
     loaders: [
       {
+        enforce: 'pre',
         test: /\.jsx?$/,
-        loader: 'babel',
+        exclude: /node_modules/,
+        loader: 'eslint'
+      },
+      {
+        test: /\.jsx?$/,
+        loaders: 'babel',
         exclude: /node_modules/,
         query: {
           cacheDirectory: true,
@@ -27,7 +33,7 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
-        // use: ["style-loader", "css-loader"],
+        // use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
@@ -41,11 +47,5 @@ module.exports = {
         ]
     }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      React:      "react",
-      ReactDOM:   "react-dom"
-    })
-  ]
+  }
 }

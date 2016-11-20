@@ -2,7 +2,7 @@
 import './App.scss';
 
 // Components
-import CurrentMatches       from '../CurrentMatches/CurrentMatches';
+import React from 'react';
 import Footer               from '../Footer/Footer';
 
 const App = (props) =>
@@ -12,5 +12,9 @@ const App = (props) =>
     </div>
     <Footer />
   </div>
+
+App.propTypes = {
+  children: React.PropTypes.element.isRequired
+}
 
 export default App;

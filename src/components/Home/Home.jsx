@@ -2,6 +2,7 @@
 import './Home.scss';
 
 // JS
+import React from 'react';
 import { connect }  from 'react-redux';
 
 // Components
@@ -17,16 +18,20 @@ export const Home = ({ matches }) =>
   <div>
     <Header />
     <PageTitle>
-      <h1 className="Home-header">
+      <h1 className='Home-header'>
         <span>Leaderboard.</span>
         The one place to follow the latest golf scores.
       </h1>
     </PageTitle>
-    <div className="container">
-      <div className="row">
+    <div className='container'>
+      <div className='row'>
         <CurrentMatches matches={matches} />
       </div>
     </div>
   </div>
+
+Home.propTypes = {
+  matches: React.PropTypes.array.isRequired
+}
 
 export default connect(mapStateToProps)(Home);

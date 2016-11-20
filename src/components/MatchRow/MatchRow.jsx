@@ -2,6 +2,7 @@
 import './MatchRow.scss';
 
 // JS
+import React from 'react';
 import { Link } from 'react-router';
 
 const MatchRow = (props) =>
@@ -16,5 +17,14 @@ const MatchRow = (props) =>
       </Link>
     </p>
   </div>
+
+MatchRow.propTypes = {
+  data: React.PropTypes.shape({
+    id: React.PropTypes.number,
+    title: React.PropTypes.string.isRequired,
+    date: React.PropTypes.string.isRequired,
+    time: React.PropTypes.string.isRequired
+  })
+}
 
 export default MatchRow;

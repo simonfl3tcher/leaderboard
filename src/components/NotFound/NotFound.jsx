@@ -1,6 +1,9 @@
 // CSS/Assets
 import './NotFound.scss';
 
+// JS
+import React from 'react';
+
 const NotFound = () =>
   <div>
     <h1>

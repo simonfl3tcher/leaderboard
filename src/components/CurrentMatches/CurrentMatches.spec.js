@@ -1,15 +1,18 @@
-// Components
-import CurrentMatches     from './CurrentMatches';
-import MatchRow           from '../MatchRow/MatchRow';
+/*eslint-env mocha */
+/*global React shallow expect */
 
-let matches = [
-  { title: "BSE vs Stowmarket", date: "12-12-2015", time: "11:00" }
+// Components
+import CurrentMatches from './CurrentMatches';
+import MatchRow from '../MatchRow/MatchRow';
+
+const matches = [
+  { title: 'BSE vs Stowmarket', date: '12-12-2015', time: '11:00' }
 ];
 
-describe("<MatchRow />", () => {
+describe('<MatchRow />', () => {
 
-  describe("when a match is set", () => {
-    it("should render a MatchRow", () => {
+  describe('when a match is set', () => {
+    it('should render a MatchRow', () => {
       const wrapper = shallow(<CurrentMatches matches={matches}/>);
       expect(
         wrapper.find(MatchRow)
@@ -17,11 +20,12 @@ describe("<MatchRow />", () => {
     });
   });
 
-  describe("when a match is not set", () => {
-    it("should display the string 'There are no matches happening right now :('", () => {
+  describe('when a match is not set', () => {
+    it('should display the string \
+      \'There are no matches happening right now :(\'', () => {
       const wrapper = shallow(<CurrentMatches matches={[]}/>);
       expect(
-        wrapper.contains("There are no matches happening right now :(")
+        wrapper.contains('There are no matches happening right now :(')
       ).to.equal(true);
     });
   });

@@ -3,6 +3,7 @@ import './Header.scss';
 import logo from '../../assets/logo.svg';
 
 // JS
+import React from 'react';
 import { Link } from 'react-router';
 
 const Header = () =>

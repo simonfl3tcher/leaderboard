@@ -2,7 +2,7 @@
 import './CurrentMatches.scss';
 
 // JS
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 // Components
 import MatchRow      from '../MatchRow/MatchRow';
@@ -31,6 +31,10 @@ class CurrentMatches extends Component {
       </div>
     )
   }
+}
+
+CurrentMatches.propTypes = {
+  matches: React.PropTypes.array.isRequired
 }
 
 export default CurrentMatches;

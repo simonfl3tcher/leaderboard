@@ -2,6 +2,7 @@
 import './ViewMatch.scss';
 
 // JS
+import React from 'react';
 import { connect } from 'react-redux';
 
 // Components
@@ -26,5 +27,11 @@ export const ViewMatch = ({ match }) =>
       </div>
     </div>
   </div>
+
+ViewMatch.propTypes = {
+  match: React.PropTypes.shape({
+    title: React.PropTypes.string.isRequired
+  })
+}
 
 export default connect(mapStateToProps)(ViewMatch);
