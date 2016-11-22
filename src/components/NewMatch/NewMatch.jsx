@@ -37,6 +37,7 @@ export class NewMatch extends Component {
               <fieldset>
                 <label> Title </label>
                 <input
+                  name='title'
                   ref='title'
                   type='text'
                   placeholder='Match Title'
@@ -44,6 +45,7 @@ export class NewMatch extends Component {
                   />
                 <label> Date </label>
                 <input
+                  name='date'
                   ref='date'
                   type='text'
                   placeholder='Match Date'
@@ -51,6 +53,7 @@ export class NewMatch extends Component {
                   />
                 <label> Time </label>
                 <input
+                  name='time'
                   ref='time'
                   type='text'
                   placeholder='Match Time'

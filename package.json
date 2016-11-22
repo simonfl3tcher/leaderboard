@@ -7,10 +7,13 @@
   "scripts": {
     "server": "cross-env NODE_ENV=development webpack-dev-server --port 2000 --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "mocha \"src/**/*.spec.js\""
+    "test": "mocha \"src/**/*.spec.js\"",
+    "nightwatch": "nightwatch"
   },
   "standard": {
-    "env": [ "mocha" ]
+    "env": [
+      "mocha"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -37,6 +40,7 @@
     "jshint-loader": "^0.8.3",
     "milligram": "^1.1.0",
     "mocha": "^3.1.2",
+    "nightwatch": "^0.9.9",
     "node-sass": "^3.11.2",
     "react-addons-test-utils": "^15.3.2",
     "react-scripts": "0.7.0",
