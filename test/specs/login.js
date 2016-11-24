@@ -8,8 +8,8 @@ module.exports = {
       .setValue('input[name="date"]', '11/12/2106')
       .setValue('input[name="time"]', '11:00')
       .click('button[type="submit"]')
-      .waitForElementVisible('.section', 5000)
-      .assert.containsText('body', 'BSE vs Stowmarket');
+      .waitForElementVisible('#currentMatches .section', 5000)
+      .assert.containsText('#currentMatches .section', 'BSE vs Stowmarket');
 
     client.end();
   }

@@ -14,4 +14,5 @@ build
 .env
 npm-debug.log
 selenium-debug.log
+phantomjsdriver.log
 tests_output/*

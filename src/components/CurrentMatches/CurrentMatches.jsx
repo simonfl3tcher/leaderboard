@@ -26,7 +26,9 @@ class CurrentMatches extends Component {
 
   render () {
     return(
-      <div className="column column-60 column-offset-20 text-center push-top">
+      <div
+        id='currentMatches'
+        className="column column-60 column-offset-20 text-center push-top">
         { this.renderListOrNoListMessage() }
       </div>
     )

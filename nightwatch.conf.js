@@ -15,6 +15,7 @@ var DEFAULT_CONFIGURATION = {
   launch_url: 'http://localhost:2000',
   selenium_port: 4444,
   selenium_host: 'localhost',
+  silent: true,
   desiredCapabilities: CHROME_CONFIGURATION
 };
 
