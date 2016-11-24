@@ -8,7 +8,10 @@ function print_state() {
 }
 
 function kill_process() {
-  kill -9 $1 || true
+  if [[ $1 ]]; then
+    pkill -TERM -P $1
+    kill -9 $1
+  fi
 }
 
 function is_port_alive() {
@@ -34,6 +37,7 @@ function check_for_port_to_be_in_use() {
 
 if is_port_alive; then
   print_state "webpack server running"
+  RUN_NIGHTWATCH=1
 else
   npm run server:quite & APP_SERVER=$!
   sleep 1
@@ -41,9 +45,8 @@ else
   check_for_port_to_be_in_use
 fi
 
-
 if (($RUN_NIGHTWATCH==1)); then
-  npm run nightwatch & NIGHTWATCH=$!
+  nightwatch & NIGHTWATCH=$!
   wait $NIGHTWATCH
   kill_process $APP_SERVER
 fi
