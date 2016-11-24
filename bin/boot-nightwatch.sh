@@ -46,7 +46,7 @@ else
 fi
 
 if (($RUN_NIGHTWATCH==1)); then
-  nightwatch & NIGHTWATCH=$!
+  ../node_modules/nightwatch & NIGHTWATCH=$!
   wait $NIGHTWATCH
   kill_process $APP_SERVER
 fi
