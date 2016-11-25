@@ -24,8 +24,7 @@ var ENVIRONMENTS = {
 };
 
 module.exports = {
-  src_folders: ['test/specs'],
-  page_objects_path: 'test/pages',
+  src_folders: ['test/specs/e2e'],
   selenium: SELENIUM_CONFIGURATION,
   test_settings: ENVIRONMENTS
 };
