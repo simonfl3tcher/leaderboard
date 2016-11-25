@@ -1,11 +1,8 @@
 var SELENIUM_CONFIGURATION = {
   start_process: true,
-  server_path: './bin/selenium-server-standalone-2.53.1.jar',
+  server_path: './node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.0.1.jar',
   host: '127.0.0.1',
-  port: 4444,
-  cli_args : {
-    'webdriver.chrome.driver' : 'node_modules/chromedriver/lib/chromedriver/chromedriver'
-  }
+  port: 4444
 };
 
 var CHROME_CONFIGURATION = {

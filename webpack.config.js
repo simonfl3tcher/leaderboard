@@ -1,6 +1,6 @@
 'use strict';
 
-require('webpack');
+require('webpack')
 
 module.exports = {
   devtool: 'source-map',
@@ -13,6 +13,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
+  resolveLoader: {
+    modules: ['node_modules', __dirname + '/client/node_modules'],
+    moduleExtensions: ["-loader"]
+  },
   module: {
     loaders: [
       {
@@ -23,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        loaders: 'babel',
+        loaders: 'babel-loader',
         exclude: /node_modules/,
         query: {
           cacheDirectory: true,
@@ -33,7 +37,6 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
-        // use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
@@ -45,7 +48,7 @@ module.exports = {
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
-    }
+      }
     ]
   }
 }
