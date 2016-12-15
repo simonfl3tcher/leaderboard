@@ -25,10 +25,14 @@ Please follow the following steps to get up and running.
     npm run nightwatch
     ```
 
-  4. Start the webpack server
+  4. Run the static type checker
+
+    ```javascript
+    npm run flow
+    ```
+
+  5. Start the webpack server
 
     ```javascript
     npm run server
     ```
-
-
