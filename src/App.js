@@ -1,3 +1,5 @@
+/* @flow */
+
 // CSS/Assets
 import 'milligram'
 import './default.scss'

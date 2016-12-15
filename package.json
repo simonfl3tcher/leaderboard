@@ -9,7 +9,8 @@
     "server:quite": "webpack-dev-server --port 2000 --quiet --no-info",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "test": "mocha \"src/**/*.spec.js\"",
-    "nightwatch": "./bin/boot-nightwatch.sh"
+    "nightwatch": "./bin/boot-nightwatch.sh",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "standard": {
     "env": [
@@ -33,6 +34,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.1",
     "eslint-plugin-react": "^6.7.1",
+    "flow-bin": "^0.37.0",
     "ignore-styles": "^5.0.1",
     "image-webpack-loader": "^3.0.0",
     "istanbul-instrumenter-loader": "^1.0.0",
