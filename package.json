@@ -57,6 +57,7 @@
     "webpack-dev-server": "^2.1.0-beta.10"
   },
   "dependencies": {
+    "flow-typed": "^2.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",

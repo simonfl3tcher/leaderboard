@@ -10,7 +10,7 @@ Please follow the following steps to get up and running.
   1. Install dependencies:
 
     ```javascript
-    npm install
+    npm install && flow-typed install
     ```
 
   2. Run the unit tests
